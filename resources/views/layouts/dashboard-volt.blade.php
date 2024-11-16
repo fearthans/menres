@@ -265,11 +265,10 @@
             @yield('content')
         </div>
         <!--DISPLAY CONTENT-->
-
-        <footer class="bg-white rounded shadow p-3 mb-4 mt-4">
-            <div class="row">
+        <footer class="mx-2">
+            <div class="row bg-white rounded shadow p-3 mb-4 mt-4">
                 <div class="col-12 col-md-8 mb-md-0">
-                    <p class="mb-0 text-center text-lg-start">© 2024-<span class="current-year"></span> Project
+                    <p class="mb-0 text-center text-lg-start text-nowrap">© 2024-<span class="current-year"></span> Project
                         Manajemen Risiko</p>
                 </div>
                 <div class="col-12 col-md-4 text-center text-lg-start">
@@ -283,6 +282,7 @@
             </div>
         </footer>
     </main>
+    
 
     <!-- Core -->
     <script src="{{ asset('vendor/@popperjs/core/dist/umd/popper.min.js') }}"></script>
