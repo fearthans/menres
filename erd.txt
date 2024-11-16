@@ -1,0 +1,50 @@
+## Migration ##
+
+permission:
+- kelola pengguna (admin)
+
+users:
+- email->unique()
+- password (string)
+- name (varchar 255)
+
+kategori_aset_kritis:
+- nama_kategori (varchar 255)
+Data, Sistem, Hardware, People
+
+informasi_aset_kritis: 
+- id_kategori (relasi ke tabel kategori_aset_kritis)
+- nama_aset (varchar 255)
+- deskripsi (varchar 500)
+
+persyaratan_keamanan:
+- id_aset (relasi ke tabel informasi_aset_kritis)
+- jenis (enumerate : "1", "2", "3") // 1 top priority
+- kebutuhan (varchar 255)
+
+risiko:
+- kode
+- id_aset
+- kerentanan
+- ancaman
+- potensi
+- sebab
+- efek
+- severity
+- occurrence
+- detection
+- mitigation
+- created_at', 'updated_at', 'mitigation_date';
+
+Kerahasiaan (Confidentiality)
+Integritas (Integrity)
+Ketersediaan Informasi (Availability)
+
+## Seeder ##
+Jabatan: Admin, Kepala UPT, Operator, Risk Owner
+Permission: kelola-pengguna (admin), kelola-kategori-aset (Operator), kelola-informasi-aset (Operator)
+
+Admin:  Kelola Pengguna, Kelola Jabatan
+Risk Owner: Dashboard, Identifikasi Risiko, Analisis Risiko, Evaluasi Risiko
+Operator: kelola kategori, kelola aset, kelola persyaratan keamanan
+Kepala UPT: lihat_profile_risiko
