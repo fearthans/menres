@@ -32,22 +32,49 @@ class Risiko extends Model
                 // 'aset' => $item->asetKritis->name,
                 'risiko' => $item->map(function ($risiko) {
                     return [
-                            'aset' => $risiko->id,
-                            'kode' => $risiko->kode,
-                            'kerentanan' => $risiko->kerentanan,
-                            'ancaman' => $risiko->ancaman,
-                            'potensi_sebab' => $risiko->potensi_sebab,
-                            'potensi_efek' => $risiko->potensi_efek,
-                            'severity' => $risiko->severity,
-                            'occurrence' => $risiko->occurrence,
-                            'detection' => $risiko->detection
-                        ];
+                        'aset' => $risiko->id,
+                        'kode' => $risiko->kode,
+                        'kerentanan' => $risiko->kerentanan,
+                        'ancaman' => $risiko->ancaman,
+                        'potensi_sebab' => $risiko->potensi_sebab,
+                        'potensi_efek' => $risiko->potensi_efek,
+                        'severity' => $risiko->severity,
+                        'occurrence' => $risiko->occurrence,
+                        'detection' => $risiko->detection
+                    ];
                 })->toArray(),
             ];
         });
-        return($risikos);
+        return ($risikos);
     }
 
-    // ambil jumlah asset semua, lalu ambil jumlah aseet yang punya nilai risiko
-    // buat list yang menampilkan jumlah risiko yang dimiliki tiap asset 
+    public static function getLevelRisk()
+    {
+        $risikos = Risiko::all();
+        $kategoriRisiko = [];
+
+        foreach ($risikos as $risiko) {
+            $rpn = $risiko->severity * $risiko->occurrence * $risiko->detection;
+
+            if ($rpn > 210) {
+                $kategori = 'very high';
+            } elseif ($rpn > 150) {
+                $kategori = 'high';
+            } elseif ($rpn > 80) {
+                $kategori = 'medium';
+            } elseif ($rpn > 20) {
+                $kategori = 'low';
+            } else {
+                $kategori = 'very low';
+            }
+
+            if (!isset($kategoriRisiko[$kategori])) {
+                $kategoriRisiko[$kategori] = 0;
+            }
+
+            $kategoriRisiko[$kategori]++;
+        }
+
+        return $kategoriRisiko;
+    }
 }

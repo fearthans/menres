@@ -1,11 +1,22 @@
 @extends('layouts.dashboard-volt')
 
 @section('styles')
+<style>
+    .bg-pink {
+        background-color: #EF4683;
+    }
+    .bg-cyan {
+        background-color: #63b1bd;
+    }
+    .bg-blue {
+        background-color: #2361ce;
+    }
+</style>
 @endsection
 
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row">
             <div class="col-12 col-sm-6 col-xl-4 mb-4">
                 <div class="card border-0 shadow">
                     <div class="card-body">
@@ -35,7 +46,6 @@
                 </div>
             </div>
 
-
             <div class="col-12 col-sm-6 col-xl-4 px-2 mb-4">
                 <div class="card border-0 shadow">
                     <div class="card-header d-flex flex-row align-items-center flex-0 border-bottom">
@@ -58,7 +68,41 @@
                 </div>
             </div>
         </div>
-        <div class="row justify-content-center">
+        <div class="row">
+            <div class="col-12 d-flex justify-content-evenly mb-3">
+                <div class="card border-1 shadow bg-danger">
+                    <div class="card-body p-0 d-flex align-items-center">
+                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">{{$riskItems['levelRisk']['very high']}}</div>
+                        <h6 class="h6 text-gray-100 mb-0 p-2">Very High</h6>
+                    </div>
+                </div>
+                <div class="card border-1 shadow bg-pink">
+                    <div class="card-body p-0 d-flex align-items-center">
+                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">{{$riskItems['levelRisk']['high']}}</div>
+                        <h6 class="h6 text-gray-100 mb-0 p-2">Hight</h6>
+                    </div>
+                </div>
+                <div class="card border-1 shadow bg-warning">
+                    <div class="card-body p-0 d-flex align-items-center">
+                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">{{$riskItems['levelRisk']['medium']}}</div>
+                        <h6 class="h6 text-gray-100 mb-0 p-2">Medium</h6>
+                    </div>
+                </div>
+                <div class="card border-1 shadow bg-cyan">
+                    <div class="card-body p-0 d-flex align-items-center">
+                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">{{$riskItems['levelRisk']['low']}}</div>
+                        <h6 class="h6 text-gray-100 mb-0 p-2">Low</h6>
+                    </div>
+                </div>
+                <div class="card border-1 shadow bg-blue">
+                    <div class="card-body p-0 d-flex align-items-center">
+                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">{{$riskItems['levelRisk']['very low']}}</div>
+                        <h6 class="h6 text-gray-100 mb-0 p-2">Very Low</h6>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
             <div class="col-12 mb-4">
                 <div class="card border-0 shadow">
                     <div class="card-header d-flex flex-row align-items-center flex-0 border-bottom">
@@ -66,23 +110,21 @@
                         <div class="d-flex ms-auto gap-4">
                             <div class="text-primary d-flex align-items-center gap-2">
                                 <svg fill="currentColor" className="icon icon-xs ms-2" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    viewBox="0 0 512 512">
                                     <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
                                 </svg>
-        {{-- // bar analisis risiko (- severity - occurrence - detection) --}}
-
                                 <div class="m-0 h6 fw-bold">Severity</div>
                             </div>
                             <div class="text-secondary d-flex align-items-center gap-2">
                                 <svg fill="currentColor" className="icon icon-xs ms-2" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    viewBox="0 0 512 512">
                                     <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
                                 </svg>
                                 <div class="m-0 h6 fw-bold">Occurrence</div>
                             </div>
                             <div class="text-success d-flex align-items-center gap-2">
                                 <svg fill="currentColor" className="icon icon-xs ms-2" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    viewBox="0 0 512 512">
                                     <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
                                 </svg>
                                 <div class="m-0 h6 fw-bold">Detection</div>

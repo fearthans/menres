@@ -120,8 +120,11 @@
                     <li class="nav-item {{ Request::routeIs(['risk.owner.analyze']) ? 'active' : '' }}">
                         <a href="{{ route('risk.owner.analyze') }}" class="nav-link d-flex align-items-center">
                             <span class="sidebar-icon">
-                            <svg class="icon icon-xs me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
-                                <path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
+                                <svg class="icon icon-xs me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512">
+                                    <path
+                                        d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z" />
+                                </svg>
                             </span>
                             <span class="ms-2 sidebar-text">Analsis Risiko</span>
                         </a>
@@ -131,7 +134,11 @@
                     <li class="nav-item {{ Request::routeIs(['risk.owner.evaluate']) ? 'active' : '' }}">
                         <a href="{{ route('risk.owner.evaluate') }}" class="nav-link d-flex align-items-center">
                             <span class="sidebar-icon">
-                                <svg class="icon icon-xs me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 160l-128 0 0-32 128 0 0 32zM48 64C21.5 64 0 85.5 0 112l0 64c0 26.5 21.5 48 48 48l416 0c26.5 0 48-21.5 48-48l0-64c0-26.5-21.5-48-48-48L48 64zM448 352l0 32-256 0 0-32 256 0zM48 288c-26.5 0-48 21.5-48 48l0 64c0 26.5 21.5 48 48 48l416 0c26.5 0 48-21.5 48-48l0-64c0-26.5-21.5-48-48-48L48 288z"/></svg>
+                                <svg class="icon icon-xs me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 512 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path
+                                        d="M448 160l-128 0 0-32 128 0 0 32zM48 64C21.5 64 0 85.5 0 112l0 64c0 26.5 21.5 48 48 48l416 0c26.5 0 48-21.5 48-48l0-64c0-26.5-21.5-48-48-48L48 64zM448 352l0 32-256 0 0-32 256 0zM48 288c-26.5 0-48 21.5-48 48l0 64c0 26.5 21.5 48 48 48l416 0c26.5 0 48-21.5 48-48l0-64c0-26.5-21.5-48-48-48L48 288z" />
+                                </svg>
                             </span>
                             <span class="ms-2 sidebar-text">Evaluasi Risiko</span>
                         </a>
@@ -141,7 +148,11 @@
                     <li class="nav-item {{ Request::routeIs(['risk.owner.manage']) ? 'active' : '' }}">
                         <a href="{{ route('risk.owner.manage') }}" class="nav-link d-flex align-items-center">
                             <span class="sidebar-icon">
-                                <svg class="icon icon-xs me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M192 0c-41.8 0-77.4 26.7-90.5 64L64 64C28.7 64 0 92.7 0 128L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64l-37.5 0C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM305 273L177 401c-9.4 9.4-24.6 9.4-33.9 0L79 337c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L271 239c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z"/></svg>
+                                <svg class="icon icon-xs me-2" fill="currentColor" xmlns="http://www.w3.org/2000/svg"
+                                    viewBox="0 0 384 512"><!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                                    <path
+                                        d="M192 0c-41.8 0-77.4 26.7-90.5 64L64 64C28.7 64 0 92.7 0 128L0 448c0 35.3 28.7 64 64 64l256 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64l-37.5 0C269.4 26.7 233.8 0 192 0zm0 64a32 32 0 1 1 0 64 32 32 0 1 1 0-64zM305 273L177 401c-9.4 9.4-24.6 9.4-33.9 0L79 337c-9.4-9.4-9.4-24.6 0-33.9s24.6-9.4 33.9 0l47 47L271 239c9.4-9.4 24.6-9.4 33.9 0s9.4 24.6 0 33.9z" />
+                                </svg>
                             </span>
                             <span class="ms-2 sidebar-text">Kelola Mitigasi</span>
                         </a>
@@ -177,37 +188,22 @@
                     </li>
                 @endif
                 @if (Auth::user()->getRoleNames()[0] == 'kepala_upt')
+                    <li class="nav-item {{ Request::routeIs(['kepala.upt.risk.profile']) ? 'active' : '' }}">
+                        <a href="{{ route('kepala.upt.risk.profile') }}" class="nav-link d-flex align-items-center">
+                            <span class="sidebar-icon">
+                                <svg class="icon icon-xs me-2" fill="currentColor" viewBox="0 0 20 20"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2 10a8 8 0 018-8v8h8a8 8 0 11-16 0z"></path>
+                                    <path d="M12 2.252A8.014 8.014 0 0117.748 8H12V2.252z"></path>
+                                </svg>
+                            </span>
+                            <span class="ms-2 sidebar-text">Dashboard</span>
+                        </a>
+                    </li>
                 @endif
-
-                {{-- <li class="nav-item {{ Request::routeIs(['products.*']) ? 'active' : '' }}">
-                    <a href="{{ route('products.index') }}" class="nav-link d-flex align-items-center">
-                        <span class="sidebar-icon">
-                            <i class="fa-solid fa-box"></i>
-                        </span>
-                        <span class="ms-2 sidebar-text">Produk</span>
-                    </a>
-                </li>
-                <li class="nav-item {{ Request::routeIs(['transactions.*']) ? 'active' : '' }}">
-                    <a href="{{ route('transactions.index') }}" class="nav-link d-flex align-items-center">
-                        <span class="sidebar-icon">
-                            <i class="fa-solid fa-money-bill"></i>
-                        </span>
-                        <span class="ms-2 sidebar-text">Transaksi</span>
-                    </a>
-                </li>
-                <li class="nav-item {{ Request::routeIs(['shops.*']) ? 'active' : '' }}">
-                    <a href="{{ route('shops.index') }}" class="nav-link d-flex align-items-center">
-                        <span class="sidebar-icon">
-                            <i class="fa-solid fa-shop"></i>
-                        </span>
-                        <span class="ms-2 sidebar-text">Toko</span>
-                    </a>
-                </li> --}}
-
                 <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
             </ul>
             <!--HEADER NAV-->
-
         </div>
     </nav>
 
@@ -268,7 +264,8 @@
         <footer class="mx-2">
             <div class="row bg-white rounded shadow p-3 mb-4 mt-4">
                 <div class="col-12 col-md-8 mb-md-0">
-                    <p class="mb-0 text-center text-lg-start text-nowrap">© 2024-<span class="current-year"></span> Project
+                    <p class="mb-0 text-center text-lg-start text-nowrap">© 2024-<span class="current-year"></span>
+                        Project
                         Manajemen Risiko</p>
                 </div>
                 <div class="col-12 col-md-4 text-center text-lg-start">
@@ -282,7 +279,7 @@
             </div>
         </footer>
     </main>
-    
+
 
     <!-- Core -->
     <script src="{{ asset('vendor/@popperjs/core/dist/umd/popper.min.js') }}"></script>

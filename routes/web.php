@@ -62,8 +62,6 @@ Route::middleware(['auth'])->group(function () {
         Route::delete('/risk/mitigation/{id}/delete', [RiskOwnerController::class, 'deleteManageMitigation'])->name('risk.owner.manage.delete');
     });
 
-
-
     // Kepala UPT Routes
     Route::middleware(['role:kepala_upt'])->group(function () {
         Route::get('/risk/profile', [RiskController::class, 'showRiskProfile'])->name('kepala.upt.risk.profile');

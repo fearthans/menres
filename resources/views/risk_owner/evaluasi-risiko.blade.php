@@ -5,28 +5,23 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css">
     <style>
         .very-high {
-            background-color: #ff0000 !important;
-            color: black !important;
+            background-color: #E11D48 !important;
         }
 
         .high {
-            background-color: #ff4d00 !important;
-            color: black !important;
+            background-color: #EF4683 !important;
         }
 
         .medium {
-            background-color: #ffa300 !important;
-            color: black !important;
+            background-color: #f3c78e !important;
         }
 
         .low {
-            background-color: #e3ff00 !important;
-            color: black !important;
+            background-color: #63b1bd !important;
         }
 
         .very-low {
-            background-color: #a3ff00 !important;
-            color: black !important;
+            background-color: #2361ce !important;
         }
     </style>
 @endsection
@@ -34,6 +29,9 @@
 @section('content')
     <div class="container">
         <div class="card border-0 shadow mb-4">
+            <div class="card-header d-flex flex-row align-items-center flex-0 py-3 border-bottom">
+                <h2 class="h6 text-gray-700 mb-0">Evaluasi Risiko</h2>
+            </div>
             <div class="card-body">
                 <div class="table-responsive">
                     <table id="evaluate" style="width: 100%"
@@ -58,7 +56,7 @@
                                     <td class="overflow-scroll" style="max-width: 300px; overflow-y: hidden !important;">
                                         {{ $risiko->potensi_sebab }}</td>
                                     <td class="text-center fw-bold">{{ $risiko->rpn }}</td>
-                                    <td class="text-center fw-bold {{ str_replace(' ', '-', strtolower($risiko->kategori)) }}">
+                                    <td class="text-center text-gray-100 fw-bold {{ str_replace(' ', '-', strtolower($risiko->kategori)) }}">
                                         {{ $risiko->kategori }}</td>
                                 </tr>
                             @endforeach

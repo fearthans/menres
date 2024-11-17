@@ -22,6 +22,7 @@ class RiskOwnerController extends Controller
             'asetCateogry' => InformasiAsetKritis::getCountAssetByCategory(),
             'persyaratanKeamanan' => PersyaratanKeamanan::getSecurityRequirementAssetCounts(),
             'risikos' => Risiko::getRisksOrderByAsset(),
+            'levelRisk' => Risiko::getLevelRisk()
         ]);
     }
     public function analyzeRisk()
