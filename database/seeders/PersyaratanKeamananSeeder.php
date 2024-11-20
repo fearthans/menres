@@ -17,13 +17,13 @@ class PersyaratanKeamananSeeder extends Seeder
         $dataPersyaratan = [
             'Data Nilai' => [
                 [
-                    'jenis' => '3',
+                    'jenis' => '2',
                     'kebutuhan' => 'Data akurat konsisten tidak berubah tanpa izin dari yang berhak memberi nilai.',
                 ]
             ],
             'SIAKAD' => [
                 [
-                    'jenis' => '3',
+                    'jenis' => '2',
                     'kebutuhan' => 'Dapat diakses cepat, tepat, dan tersedia 24/7.',
                 ]
             ],

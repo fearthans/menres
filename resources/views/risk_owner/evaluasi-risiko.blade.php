@@ -3,27 +3,6 @@
 @section('styles')
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/2.1.8/css/dataTables.bootstrap5.css">
-    <style>
-        .very-high {
-            background-color: #E11D48 !important;
-        }
-
-        .high {
-            background-color: #EF4683 !important;
-        }
-
-        .medium {
-            background-color: #f3c78e !important;
-        }
-
-        .low {
-            background-color: #63b1bd !important;
-        }
-
-        .very-low {
-            background-color: #2361ce !important;
-        }
-    </style>
 @endsection
 
 @section('content')

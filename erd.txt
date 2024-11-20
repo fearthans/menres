@@ -36,9 +36,9 @@ risiko:
 - mitigation
 - created_at', 'updated_at', 'mitigation_date';
 
-Kerahasiaan (Confidentiality)
-Integritas (Integrity)
-Ketersediaan Informasi (Availability)
+3 - Kerahasiaan (Confidentiality)
+2 - Integritas (Integrity)
+1 - Ketersediaan Informasi (Availability)
 
 ## Seeder ##
 Jabatan: Admin, Kepala UPT, Operator, Risk Owner

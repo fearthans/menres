@@ -1,17 +1,19 @@
 @extends('layouts.dashboard-volt')
 
 @section('styles')
-<style>
-    .bg-pink {
-        background-color: #EF4683;
-    }
-    .bg-cyan {
-        background-color: #63b1bd;
-    }
-    .bg-blue {
-        background-color: #2361ce;
-    }
-</style>
+    <style>
+        .bg-pink {
+            background-color: #EF4683;
+        }
+
+        .bg-cyan {
+            background-color: #63b1bd;
+        }
+
+        .bg-blue {
+            background-color: #2361ce;
+        }
+    </style>
 @endsection
 
 @section('content')
@@ -63,7 +65,7 @@
                         <div class="h6 text-gray-700 mb-0"> Item per Security Requirement</div>
                     </div>
                     <div class="card-body p-2">
-                        <div class="ct-chart-ranking ct-golden-section ct-series-a"></div>
+                        <div class="ct-chart-ranking-keamanan ct-golden-section ct-series-a"></div>
                     </div>
                 </div>
             </div>
@@ -72,31 +74,38 @@
             <div class="col-12 d-flex justify-content-evenly mb-3">
                 <div class="card border-1 shadow bg-danger">
                     <div class="card-body p-0 d-flex align-items-center">
-                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">{{$riskItems['levelRisk']['very high']}}</div>
+                        <div class="text-gray-100 fw-bold fs-5 border-end p-2 " style="">
+                            {{ isset($riskItems['levelRisk']['very high']) ? $riskItems['levelRisk']['very high'] : '0' }}
+                        </div>
                         <h6 class="h6 text-gray-100 mb-0 p-2">Very High</h6>
                     </div>
                 </div>
                 <div class="card border-1 shadow bg-pink">
                     <div class="card-body p-0 d-flex align-items-center">
-                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">{{$riskItems['levelRisk']['high']}}</div>
-                        <h6 class="h6 text-gray-100 mb-0 p-2">Hight</h6>
+                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">
+                            {{ isset($riskItems['levelRisk']['high']) ? $riskItems['levelRisk']['high'] : '0' }}</div>
+                        <h6 class="h6 text-gray-100 mb-0 p-2">High</h6>
                     </div>
                 </div>
                 <div class="card border-1 shadow bg-warning">
                     <div class="card-body p-0 d-flex align-items-center">
-                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">{{$riskItems['levelRisk']['medium']}}</div>
+                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">
+                            {{ isset($riskItems['levelRisk']['medium']) ? $riskItems['levelRisk']['medium'] : '0' }}</div>
                         <h6 class="h6 text-gray-100 mb-0 p-2">Medium</h6>
                     </div>
                 </div>
                 <div class="card border-1 shadow bg-cyan">
                     <div class="card-body p-0 d-flex align-items-center">
-                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">{{$riskItems['levelRisk']['low']}}</div>
+                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">
+                            {{ isset($riskItems['levelRisk']['low']) ? $riskItems['levelRisk']['low'] : '0' }}</div>
                         <h6 class="h6 text-gray-100 mb-0 p-2">Low</h6>
                     </div>
                 </div>
                 <div class="card border-1 shadow bg-blue">
                     <div class="card-body p-0 d-flex align-items-center">
-                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">{{$riskItems['levelRisk']['very low']}}</div>
+                        <div class="text-gray-100 fw-bold fs-5 border-end p-2" style="">
+                            {{ isset($riskItems['levelRisk']['very low']) ? $riskItems['levelRisk']['very low'] : '0' }}
+                        </div>
                         <h6 class="h6 text-gray-100 mb-0 p-2">Very Low</h6>
                     </div>
                 </div>
@@ -109,22 +118,22 @@
                         <div class="h5 text-gray-700 mb-0">Jumlah Penilaian Risiko</div>
                         <div class="d-flex ms-auto gap-4">
                             <div class="text-primary d-flex align-items-center gap-2">
-                                <svg fill="currentColor" className="icon icon-xs ms-2" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
+                                <svg fill="currentColor" className="icon icon-xs ms-2" height="24" width="24"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
                                 </svg>
                                 <div class="m-0 h6 fw-bold">Severity</div>
                             </div>
                             <div class="text-secondary d-flex align-items-center gap-2">
-                                <svg fill="currentColor" className="icon icon-xs ms-2" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
+                                <svg fill="currentColor" className="icon icon-xs ms-2" height="24" width="24"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
                                 </svg>
                                 <div class="m-0 h6 fw-bold">Occurrence</div>
                             </div>
                             <div class="text-success d-flex align-items-center gap-2">
-                                <svg fill="currentColor" className="icon icon-xs ms-2" height="24" width="24" xmlns="http://www.w3.org/2000/svg"
-                                    viewBox="0 0 512 512">
+                                <svg fill="currentColor" className="icon icon-xs ms-2" height="24" width="24"
+                                    xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
                                     <path d="M256 512A256 256 0 1 0 256 0a256 256 0 1 0 0 512z" />
                                 </svg>
                                 <div class="m-0 h6 fw-bold">Detection</div>
@@ -146,6 +155,7 @@
         var keamanan = <?php echo json_encode($riskItems['persyaratanKeamanan']); ?>;
         var assetRisks = <?php echo json_encode($riskItems['risikos']); ?>;
         console.log("risksGroupByAsset:", assetRisks);
+        console.log("persyaratanKeamanan:", keamanan);
 
         var kategoriAset = {
             series: kategori,
@@ -157,13 +167,14 @@
             },
             labelOffset: 10
         });
-        // Kerahasiaan (Confidentiality)
-        // Integritas (Integrity)
-        // Ketersediaan Informasi (Availability)
+
+        // 3 - Kerahasiaan (Confidentiality)
+        // 2 - Integritas (Integrity)
+        // 1 - Ketersediaan Informasi (Availability)
         // bar chart tingkat keamanan data
-        var chart = new Chartist.Bar('.ct-chart-ranking', {
-            labels: ['Kerahasiaan (Confidentiality)', 'Integritas (Integrity)',
-                'Ketersediaan Informasi (Availability)'
+        var chart = new Chartist.Bar('.ct-chart-ranking-keamanan', {
+            labels: ['Confidentiality', 'Integrity',
+                'Availability'
             ],
             series: [keamanan]
         }, {
@@ -173,15 +184,10 @@
             ],
             axisX: {
                 // On the x-axis start means top and end means bottom
-                position: 'end'
             },
             axisY: {
                 // On the y-axis start means left and end means right
                 offset: 10,
-                labelOffset: {
-                    x: 5,
-                    y: 10
-                },
             },
         });
 
@@ -199,6 +205,8 @@
                 });
             }
         });
+
+
 
         var labelsRiskCode = [];
         var seriesRiskSOD = [
