@@ -6529,7 +6529,7 @@ textarea.form-control-lg {
     height: 0;
     margin: 0.5rem 0;
     overflow: hidden;
-    border-top: 1px solid #E5E7EB;
+    border-top: 1px solid #E5E7EB !important;
 }
 
 .dropdown-item {

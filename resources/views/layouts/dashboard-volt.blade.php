@@ -205,6 +205,16 @@
                     </li>
                 @endif
                 <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
+                @if (Route::has('logout'))
+                    <li class="nav-item">
+                        <form action="{{ route('logout') ?? '#' }}" method="POST">
+                            @csrf
+                            <button type="submit" class="fw-bold bg-danger py-2 rounded dropdown-item d-flex align-items-center justify-content-center">
+                                Logout
+                            </button>
+                        </form>
+                    </li>
+                @endif
             </ul>
             <!--HEADER NAV-->
         </div>
