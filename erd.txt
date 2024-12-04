@@ -48,3 +48,43 @@ Admin:  Kelola Pengguna, Kelola Jabatan
 Risk Owner: Dashboard, Identifikasi Risiko, Analisis Risiko, Evaluasi Risiko
 Operator: kelola kategori, kelola aset, kelola persyaratan keamanan
 Kepala UPT: lihat_profile_risiko
+
+=IF(A2=B$1; 1; SUMPRODUCT(FILTER(Normalisasi!B2:F2; NOT(ISBLANK(Normalisasi!B2:F2))) * 
+FILTER(Normalisasi!B3:F3; NOT(ISBLANK(Normalisasi!B3:F3<>"")))) / 
+(SQRT(SUM(FILTER(Normalisasi!B2:F2^2; NOT(ISBLANK(Normalisasi!B2:F2))))) * 
+SQRT(SUM(FILTER(Normalisasi!B3:F3^2; NOT(ISBLANK(Normalisasi!B3:F3)))))))
+
+=IF(A3=B$1; 1; SUMPRODUCT(FILTER(Normalisasi!B3:F3; NOT(ISBLANK(Normalisasi!B3:F3))) * 
+FILTER(Normalisasi!B$2:F$2; NOT(ISBLANK(Normalisasi!B$2:F$2)))) / 
+(SQRT(SUM(FILTER(Normalisasi!B3:F3^2; NOT(ISBLANK(Normalisasi!B3:F3))))) * 
+SQRT(SUM(FILTER(Normalisasi!B$2:F$2^2; NOT(ISBLANK(Normalisasi!B$2:F$2)))))))
+
+=IF(A4=B$1; 1; SUMPRODUCT(FILTER(Normalisasi!B4:F4; NOT(ISBLANK(Normalisasi!B4:F4))) * 
+FILTER(Normalisasi!B$2:F$2; NOT(ISBLANK(Normalisasi!B$2:F$2)))) / 
+(SQRT(SUM(FILTER(Normalisasi!B4:F4^2; NOT(ISBLANK(Normalisasi!B4:F4))))) * 
+SQRT(SUM(FILTER(Normalisasi!B$2:F$2^2; NOT(ISBLANK(Normalisasi!B$2:F$2)))))))
+
+=IF(A5=B$1; 1; SUMPRODUCT(FILTER(Normalisasi!B5:F5; NOT(ISBLANK(Normalisasi!B5:F5))) * 
+FILTER(Normalisasi!B$2:F$2; NOT(ISBLANK(Normalisasi!B$2:F$2)))) / 
+(SQRT(SUM(FILTER(Normalisasi!B5:F5^2; NOT(ISBLANK(Normalisasi!B5:F5))))) * 
+SQRT(SUM(FILTER(Normalisasi!B$2:F$2^2; NOT(ISBLANK(Normalisasi!B$2:F$2)))))))
+
+C4
+=SUMPRODUCT(FILTER(Normalisasi!B4:F4; NOT(ISBLANK(Normalisasi!B4:F4))) * 
+FILTER(Normalisasi!B$3:F$3; NOT(ISBLANK(Normalisasi!B$3:F$3)))) / 
+(SQRT(SUM(FILTER(Normalisasi!B4:F4^2; NOT(ISBLANK(Normalisasi!B4:F4))))) * 
+SQRT(SUM(FILTER(Normalisasi!B$3:F$3^2; NOT(ISBLANK(Normalisasi!B$3:F$3))))))
+
+D5
+=SUMPRODUCT(FILTER(Normalisasi!B5:F5; NOT(ISBLANK(Normalisasi!B5:F5))) * 
+FILTER(Normalisasi!B$4:F$4; NOT(ISBLANK(Normalisasi!B$4:F$4)))) / 
+(SQRT(SUM(FILTER(Normalisasi!B4:F4^2; NOT(ISBLANK(Normalisasi!B4:F4))))) * 
+SQRT(SUM(FILTER(Normalisasi!B$4:F$4^2; NOT(ISBLANK(Normalisasi!B$4:F$4))))))
+
+E6
+=SUMPRODUCT(FILTER(Normalisasi!B6:F6; NOT(ISBLANK(Normalisasi!B6:F6))) * 
+FILTER(Normalisasi!B$5:F$5; NOT(ISBLANK(Normalisasi!B$5:F$5)))) / 
+(SQRT(SUM(FILTER(Normalisasi!B4:F4^2; NOT(ISBLANK(Normalisasi!B4:F4))))) * 
+SQRT(SUM(FILTER(Normalisasi!B$5:F$5^2; NOT(ISBLANK(Normalisasi!B$5:F$5))))))
+
+=INDEX(A2:A6; MATCH(LARGE(FILTER(B2:F2; B2:F2<>1); 2); FILTER(B2:F2; B2:F2<>1); 0))
