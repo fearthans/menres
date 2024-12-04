@@ -9,7 +9,7 @@
     <div class="container">
         <div class="card border-0 shadow mb-4">
             <div class="card-header d-flex flex-row align-items-center flex-0 py-3 border-bottom">
-                <h2 class="h6 text-gray-700 mb-0">Evaluasi Risiko</h2>
+                <h2 class="h6 text-gray-700 mb-0">Dashboard</h2>
             </div>
             <div class="card-body">
                 <div class="table-responsive">
